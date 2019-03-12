@@ -7,12 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.util.Log;
 
 public class CheatActivity extends AppCompatActivity {
 
     private static final String EXTRA_ANSWER_IS_TRUE = "com.study.liuhao.geoquiz.answer_is_true";
 
     private static final String EXTRA_ANSWER_SHOWN = "com.study.liuhao.geoquiz.answer_shown";
+
+    private static final String TAG = "QuizActivity";
 
     private boolean mAnswerIsTrue;
 
@@ -51,7 +54,12 @@ public class CheatActivity extends AppCompatActivity {
         return i;
     }
 
+    public static boolean wasAnswerShown(Intent result){
+        return result.getBooleanExtra(EXTRA_ANSWER_IS_TRUE,false);
+    }
+
     private void setAnswerShowResult(boolean isAnswerShow){
+
         Intent data = new Intent();
         data.putExtra(EXTRA_ANSWER_SHOWN,isAnswerShow);
         setResult(RESULT_OK,data);
