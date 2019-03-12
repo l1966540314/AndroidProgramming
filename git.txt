@@ -1,2 +1,7 @@
 git clone https://github.com/l1966540314/AndroidProgramming.git
 git init
+git add .
+git commit -m"demol"
+git remote add origin https://github.com/l1966540314/AndroidProgramming.git
+git pull origin master
+git push -u origin master
