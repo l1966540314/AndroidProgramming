@@ -55,7 +55,7 @@ public class CheatActivity extends AppCompatActivity {
     }
 
     public static boolean wasAnswerShown(Intent result){
-        return result.getBooleanExtra(EXTRA_ANSWER_IS_TRUE,false);
+        return result.getBooleanExtra(EXTRA_ANSWER_SHOWN,false);
     }
 
     private void setAnswerShowResult(boolean isAnswerShow){
